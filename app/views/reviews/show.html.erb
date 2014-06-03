@@ -1,0 +1,17 @@
+<h3> The Bridesmaid Shop </h3>
+
+<% dress = Dress.find_by("dress_id" => params["id"]) %>
+<% fabrics = Dressfabric.where("dress_id" => dress["dress_id"]) %>
+<% reviews = Review.where("dress_id" => dress["dress_id"]) %>
+
+<p>
+  <%= image_tag dress["dress_image"], "width" => "400" %>
+  <br> <%= dress.dress_name %>
+  <br> $<%= dress.dress_price %>
+  <br> Average Review: <%= reviews.average("review_rating") %>
+  <br> <% reviews.each do |review_list| %>
+  <br> <%= review_list.review_rating %> stars: <%= review_list.review %>  (<%= link_to "Delete", "/reviews/#{review_list["review_id"]}", "method" => "delete" %>) (<%= link_to "Edit Review", "/reviews/edit/#{review_list["id"]}" %>)
+  <% end %>
+  <br> (<%= link_to "Add Review", "/reviews/new/#{dress["dress_id"]}" %>)
+</p>
+
