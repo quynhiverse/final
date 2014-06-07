@@ -15,7 +15,6 @@ Dressfabric:
   - fabric_id: integer
 
 Review:
-  - review_id: integer
   - dress_id: integer
   - review_rating: integer
   - review: text

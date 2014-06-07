@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603001451) do
+ActiveRecord::Schema.define(version: 20140607225059) do
 
   create_table "dresses", force: true do |t|
     t.integer "dress_id"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20140603001451) do
     t.integer "dress_id"
     t.integer "review_rating"
     t.text    "review"
-    t.integer "review_id"
   end
 
 end

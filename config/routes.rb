@@ -1,21 +1,15 @@
 Final::Application.routes.draw do
 
-  get "/" => 'reviews#index'
+  get "/" => 'thebridesmaidshop#index'
+
 # Resource: Reviews
 
   # --- Create
-  get "/reviews/new/:id" => 'reviews#new'
+  get "/thebridesmaidshop/newreview/:id" => 'thebridesmaidshop#new'
   post "/reviews/:id" => 'reviews#create'
 
   # --- Read
-  get "/reviews" => 'reviews#index'
-  get "/reviews/:id" => 'reviews#show'
-
-  # -- Update
-  get "/reviews/edit/:id" => 'reviews#edit'
-  patch "/reviews/:id" => 'reviews#update'
-
-  # --- Delete
-  delete "/reviews/:id" => 'reviews#destroy'
+  get "/thebridesmaidshop" => 'thebridesmaidshop#index'
+  get "/thebridesmaidshop/:id" => 'thebridesmaidshop#show'
 
 end

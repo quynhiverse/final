@@ -1,3 +1,21 @@
+.review {
+  margin-top: 12px;
+  border-top: 2px solid gray;
+  padding-top: 12px;
+}
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+}
+
+.aside { margin-top: 36px; }
+.dress { margin-bottom: 36px; }
+
+img { border: 1px solid #CCC; box-shadow: 4px 4px 4px #999; }
+
+body { margin: 30px 30px 30px 30px;}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
